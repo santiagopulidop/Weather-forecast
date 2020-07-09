@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+}
+#navbarSupportedContent {
+  flex-grow: 0;
+}
+
+.variables {
+  display: flex;
+  justify-content: space-around;
+}
+
+.clima-hoy,
+.hora-hora,
+.dia-dia {
+  border: 1px black solid;
+}
