@@ -5,6 +5,7 @@
 #navbar {
   display: flex;
   justify-content: center;
+  max-height: 100px;
 }
 #navbarSupportedContent {
   flex-grow: 0;
@@ -19,4 +20,21 @@
 .hora-hora,
 .dia-dia {
   border: 1px black solid;
+}
+
+#resultados {
+  background-color: white;
+  display: none;
+  z-index: 3;
+  position: absolute;
+  top: 100%;
+
+  .city-item {
+    font-size: 0.75rem;
+    color: #3386ff;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
