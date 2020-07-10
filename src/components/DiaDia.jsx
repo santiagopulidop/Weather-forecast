@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CoordinatesContext } from "./Context";
+import DiaCard from "./DiaCard";
 const DiaDia = () => {
   const dias = [
     "Sunday",
@@ -19,13 +20,23 @@ const DiaDia = () => {
           let day = dias[date.getDay()];
           let dayMinTemp = `${i.temp.min}°C`;
           let dayMaxTemp = `${i.temp.max}°C`;
-
+          let codeIcon = i.weather[0].icon;
+          let description = i.weather[0].description;
+          let pressure = i.pressure;
+          let humidity = i.humidity;
+          let windSpeed = i.wind_speed;
           return (
-            <div key={index}>
-              <span>{dayMinTemp}</span>
-              <span className="p-3">{day}</span>
-              <span>{dayMaxTemp}</span>
-            </div>
+            <DiaCard
+              key={index}
+              day={day}
+              minTemp={dayMinTemp}
+              maxTemp={dayMaxTemp}
+              icon={codeIcon}
+              description={description}
+              pressure={pressure}
+              humidity={humidity}
+              windSpeed={windSpeed}
+            />
           );
         })}
       </div>

@@ -16,16 +16,10 @@
   justify-content: space-around;
 }
 
-.clima-hoy,
-.hora-hora,
-.dia-dia {
-  border: 1px black solid;
-}
-
 .hora-hora {
   width: 100%;
   max-width: 90%;
-  margin: auto;
+  margin: 4% auto;
   justify-content: space-between;
   flex-wrap: wrap;
   .hora-temp {
@@ -57,16 +51,44 @@
   width: 100vw;
   max-width: 70%;
   margin: auto;
+  margin-top: 2%;
   .clima-descripcion {
     justify-content: center;
+    .icon {
+      width: 120px;
+      height: 120px;
+    }
   }
   .variables-clima-hoy {
     max-width: fit-content;
-    h5 {
-      padding-top: 8%;
+    padding-top: 3%;
+    h6 {
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: bold;
     }
     p {
       margin: 0;
+    }
+  }
+}
+
+.dia-dia {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  .clima-dia {
+    margin: 8px 5px;
+    width: 14rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin: auto;
     }
   }
 }
