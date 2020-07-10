@@ -4,16 +4,33 @@ const HoraHora = () => {
   const { weatherInfo } = useContext(CoordinatesContext);
 
   if (weatherInfo !== "") {
+    /* let codeIcon = weatherInfo.hourly.weather[0].icon; */
     return (
       <div className="hora-hora d-flex">
         {weatherInfo.hourly.map((i, index) => {
           let date = new Date(i.dt * 1000);
           let nextHour = index % 4 === 0 ? date.getHours() : null;
           let nextTemp = index % 4 === 0 ? i.temp : null;
+          let codeIcon = index % 4 === 0 ? i.weather[0].icon : null;
+
           return (
-            <div key={index} className="p-1 hora-temp">
-              {nextHour && nextTemp && `${nextTemp}°C  ${nextHour}h`}
-            </div>
+            index % 4 === 0 && (
+              <div key={index} className="hora-temp">
+                {codeIcon && (
+                  <img
+                    src={`http://openweathermap.org/img/wn/${codeIcon}@2x.png`}
+                    alt="icon"
+                    width="50"
+                    height="50"
+                  />
+                )}
+                <span>
+                  {nextHour && nextTemp && codeIcon && `${nextTemp}°C`}
+                </span>
+                <span></span>
+                {nextHour && nextTemp && codeIcon && `${nextHour}h`}
+              </div>
+            )
           );
         })}
       </div>

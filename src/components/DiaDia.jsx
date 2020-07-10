@@ -19,6 +19,7 @@ const DiaDia = () => {
           let day = dias[date.getDay()];
           let dayMinTemp = `${i.temp.min}°C`;
           let dayMaxTemp = `${i.temp.max}°C`;
+
           return (
             <div key={index}>
               <span>{dayMinTemp}</span>

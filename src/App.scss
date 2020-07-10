@@ -23,8 +23,16 @@
 }
 
 .hora-hora {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
   .hora-temp {
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 5px;
   }
 }
 
@@ -33,10 +41,10 @@
   display: none;
   z-index: 3;
   position: absolute;
-  top: 100%;
+  top: 97%;
 
   .city-item {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     color: #3386ff;
     &:hover {
       text-decoration: underline;
