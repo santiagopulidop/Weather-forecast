@@ -1,23 +1,51 @@
-import React, { useState } from "react";
-
+import React, { useState, useContext } from "react";
+import { CoordinatesContext } from "./Context.jsx";
 const VariablesClimaticas = () => {
-  const [wind, setWind] = useState(0);
-  const [humidity, setHumidity] = useState(0);
-  const [dewPt, setDewPt] = useState(0);
-  const [uvIndex, setUvIndex] = useState(0);
-  const [visibility, setVisibility] = useState(0);
-  const [pressure, setPressure] = useState(0);
+  const { weatherInfo, queryWeather } = useContext(CoordinatesContext);
 
-  return (
-    <div className="variables bg-light border-top border-bottom pt-3">
-      <h6 className="font-weight-bold">Wind:{wind}</h6>
-      <h6 className="font-weight-bold">Humidity:{humidity}</h6>
-      <h6 className="font-weight-bold">Dew Pt: {dewPt}</h6>
-      <h6 className="font-weight-bold">Uv Index: {uvIndex}</h6>
-      <h6 className="font-weight-bold">Visibility: {visibility}</h6>
-      <h6 className="font-weight-bold">Pressure: {pressure}</h6>
-    </div>
-  );
+  if (weatherInfo !== "") {
+    return (
+      <div className="variables bg-light border-top border-bottom pt-3">
+        <h6 className="font-weight-bold">
+          Wind:{" "}
+          <span className="font-weight-normal">
+            {weatherInfo.current.wind_speed} <small>m/s</small>{" "}
+          </span>
+        </h6>
+        <h6 className="font-weight-bold">
+          Humidity:{" "}
+          <span className="font-weight-normal">
+            {weatherInfo.current.humidity}%
+          </span>
+        </h6>
+        <h6 className="font-weight-bold">
+          Dew Pt:{" "}
+          <span className="font-weight-normal">
+            {" "}
+            {weatherInfo.current.dew_point}°C
+          </span>
+        </h6>
+        <h6 className="font-weight-bold">
+          Uv Index:{" "}
+          <span className="font-weight-normal">{weatherInfo.current.uvi}</span>
+        </h6>
+        <h6 className="font-weight-bold">
+          Visibility:{" "}
+          <span className="font-weight-normal">
+            {weatherInfo.current.visibility}mts
+          </span>
+        </h6>
+        <h6 className="font-weight-bold">
+          Pressure:{" "}
+          <span className="font-weight-normal">
+            {weatherInfo.current.pressure}hPa
+          </span>
+        </h6>
+      </div>
+    );
+  } else {
+    return <div>cargando...</div>;
+  }
 };
 
 export default VariablesClimaticas;

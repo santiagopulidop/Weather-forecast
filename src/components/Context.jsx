@@ -5,6 +5,8 @@ export const CoordinatesProvider = (props) => {
   const [latitud, setLatitud] = useState("");
   const [longitud, setLongitud] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [queryWeather, setQueryWeather] = useState(false);
+  const [weatherInfo, setWeatherInfo] = useState("");
 
   return (
     <CoordinatesContext.Provider
@@ -15,6 +17,10 @@ export const CoordinatesProvider = (props) => {
         setLongitud,
         selectedCity,
         setSelectedCity,
+        queryWeather,
+        setQueryWeather,
+        weatherInfo,
+        setWeatherInfo,
       }}
     >
       {props.children}

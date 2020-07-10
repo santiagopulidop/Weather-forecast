@@ -9,10 +9,10 @@ const NavBar = () => {
   const {
     selectedCity,
     setSelectedCity,
-    latitud,
     setLatitud,
-    longitud,
     setLongitud,
+    setWeatherInfo,
+    setQueryWeather,
   } = useContext(CoordinatesContext);
 
   //Evitar Submit al presionar enter
@@ -34,6 +34,7 @@ const NavBar = () => {
   const handleCityItemClick = (e) => {
     setSelectedCity(data[e.target.id]);
     setCount(count + 1);
+
     document.getElementById("resultados").style.display = "none";
   };
 
@@ -52,6 +53,7 @@ const NavBar = () => {
       setSelectedCity([]);
       setLatitud("");
       setLongitud("");
+      setQueryWeather(false);
     }
   }, [city]);
 
@@ -60,6 +62,7 @@ const NavBar = () => {
       document.getElementById("input-city").value = selectedCity.place_name;
       setLatitud(selectedCity.geometry.coordinates[1]);
       setLongitud(selectedCity.geometry.coordinates[0]);
+      setQueryWeather(true);
     }
   }, [count]);
 
