@@ -30,7 +30,24 @@ const ClimaHoy = () => {
 
     return (
       <div className="clima-hoy">
-        <div className="clima-descripcion">
+        <div className="media clima-descripcion">
+          <img
+            src={`http://openweathermap.org/img/wn/${codeIcon}@2x.png`}
+            className="align-self-start mr-3"
+            alt="..."
+          />
+          <div className="media-body variables-clima-hoy">
+            <h5 className="mt-0">{`${weatherInfo.current.temp}°C ${weatherInfo.current.weather[0].main}`}</h5>
+
+            <p>
+              <b>Feels Like: </b> {`${weatherInfo.current.feels_like}°C`}
+            </p>
+            <p>
+              <b> {weatherInfo.current.weather[0].description}</b>
+            </p>
+          </div>
+        </div>
+        {/* <div className="clima-descripcion">
           <div className="temperatura">
             {" "}
             <span>
@@ -47,7 +64,7 @@ const ClimaHoy = () => {
           <div className="descripcion">
             {weatherInfo.current.weather[0].description}
           </div>
-        </div>
+        </div> */}
       </div>
     );
   } else {

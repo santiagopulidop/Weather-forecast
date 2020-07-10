@@ -44,3 +44,21 @@
     }
   }
 }
+
+.clima-hoy {
+  width: 100vw;
+  max-width: 70%;
+  margin: auto;
+  .clima-descripcion {
+    justify-content: center;
+  }
+  .variables-clima-hoy {
+    max-width: fit-content;
+    h5 {
+      padding-top: 8%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
