@@ -6,12 +6,14 @@ import ClimaHoy from "../components/ClimaHoy";
 import HoraHora from "../components/HoraHora";
 import DiaDia from "../components/DiaDia";
 import Footer from "../components/Footer";
+import MinutoMinuto from "../components/MinutoMinuto";
 function MainPage() {
   return (
     <CoordinatesProvider>
       <NavBar />
       <VariablesClimaticas />
       <ClimaHoy />
+      <MinutoMinuto />
       <HoraHora />
       <DiaDia />
       <Footer />

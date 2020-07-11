@@ -8,6 +8,7 @@ export const CoordinatesProvider = (props) => {
   const [selectedCity, setSelectedCity] = useState([]);
   const [queryWeather, setQueryWeather] = useState(false);
   const [weatherInfo, setWeatherInfo] = useState("");
+  const [infoMinutos, setInfoMinutos] = useState(false);
   const [defaultCity, setDefaultCity] = useState(
     JSON.parse(localStorage.getItem("City"))
   );
@@ -48,6 +49,8 @@ export const CoordinatesProvider = (props) => {
         setQueryWeather,
         weatherInfo,
         setWeatherInfo,
+        setInfoMinutos,
+        infoMinutos,
       }}
     >
       {props.children}
