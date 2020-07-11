@@ -11,7 +11,7 @@ const HoraHora = () => {
           let nextHour = index % 4 === 0 ? date.getHours() : null;
           let nextTemp = index % 4 === 0 ? i.temp : null;
           let codeIcon = index % 4 === 0 ? i.weather[0].icon : null;
-
+          console.log(nextHour + ":00", nextTemp, index);
           return (
             index % 4 === 0 && (
               <div key={index} className="hora-temp">
@@ -24,10 +24,10 @@ const HoraHora = () => {
                   />
                 )}
                 <span className="font-color">
-                  {nextHour && nextTemp && codeIcon && `${nextTemp}°C`}
+                  {codeIcon && `${nextTemp}°C`}
                 </span>
                 <span className="font-color">
-                  {nextHour && nextTemp && codeIcon && `${nextHour}:00`}
+                  {codeIcon && `${nextHour}:00`}
                 </span>
               </div>
             )
