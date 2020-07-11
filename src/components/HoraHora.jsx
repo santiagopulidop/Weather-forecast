@@ -28,7 +28,7 @@ const HoraHora = () => {
                   {nextHour && nextTemp && codeIcon && `${nextTemp}°C`}
                 </span>
                 <span></span>
-                {nextHour && nextTemp && codeIcon && `${nextHour}h`}
+                {nextHour && nextTemp && codeIcon && `${nextHour}:00`}
               </div>
             )
           );

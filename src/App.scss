@@ -1,11 +1,33 @@
 .App {
   text-align: center;
+  /*  @media screen and (min-width: 320px) and (max-width: 500px) {
+    width: 100%;
+    max-width: 95%;
+    margin: auto;
+  } */
 }
 
 #navbar {
   display: flex;
   justify-content: center;
-  max-height: 100px;
+  padding: 1.5%;
+  a {
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    padding-bottom: 5%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 36px;
+    a {
+      margin-top: 5%;
+      text-align: center;
+    }
+    #navbarSuportedContent {
+      margin-right: 25px;
+    }
+  }
 }
 #navbarSupportedContent {
   flex-grow: 0;
@@ -14,6 +36,22 @@
 .variables {
   display: flex;
   justify-content: space-around;
+  padding: 1%;
+  .var {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 3%;
+    justify-content: center;
+    .var {
+      margin: 10px;
+    }
+  }
 }
 
 .hora-hora {
@@ -27,6 +65,15 @@
     display: flex;
     flex-direction: column;
     margin: 2px 5px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    width: 100%;
+    max-width: 90%;
+    margin: 12% auto;
+    justify-content: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 94%;
   }
 }
 
@@ -71,6 +118,32 @@
       margin: 0;
     }
   }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    width: 100%;
+    max-width: 90%;
+    margin: 6% auto;
+    .variables-clima-hoy {
+      padding-top: 8%;
+      padding-right: 12%;
+      h6 {
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 4%;
+    .variables-clima-hoy {
+      padding-right: 14%;
+      padding-top: 5%;
+      h6 {
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .dia-dia {
@@ -91,4 +164,19 @@
       margin: auto;
     }
   }
+  @media screen and (min-width: 320px) and (max-width: 500px) {
+    justify-content: center;
+    margin-top: 8%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 95%;
+    justify-content: center;
+  }
+}
+
+#lupa-buscar {
+  position: absolute;
+  height: 22px;
+  left: 105%;
+  top: 18%;
 }

@@ -22,11 +22,18 @@ const ClimaHoy = () => {
         })
         .catch((err) => console.log(err));
     }
-    console.log(weatherInfo);
   }, [queryWeather]);
 
   if (weatherInfo !== "") {
+    localStorage.setItem("weatherInfo", JSON.stringify(weatherInfo));
+    /* setDefaulCity(document.getElementById("input-city").value); */
     let codeIcon = weatherInfo.current.weather[0].icon;
+    if (queryWeather) {
+      localStorage.setItem(
+        "City",
+        JSON.stringify(document.getElementById("input-city").value)
+      );
+    }
 
     return (
       <div className="clima-hoy">

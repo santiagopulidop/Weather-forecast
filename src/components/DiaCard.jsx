@@ -23,23 +23,23 @@ const DiaCard = ({
           <small className="text-center font-italic w-100">{description}</small>
         </p>
         <small className="card-text m-1 badge badge-pill badge-secondary">
-          min: <span class="badge badge-light">{minTemp}</span>
+          min: <span className="badge badge-light">{minTemp}</span>
         </small>
         <small className="card-text badge-pill badge badge-secondary">
-          max: <span class="badge badge-light">{maxTemp}</span>
+          max: <span className="badge badge-light">{maxTemp}</span>
         </small>
         <small className="card-text m-1 badge-pill badge badge-secondary">
-          <span class="badge badge-light" title="Pressure">
+          <span className="badge badge-light" title="Pressure">
             {pressure}hPa
           </span>
         </small>
         <small className="card-text badge-pill m-1 badge badge-secondary">
-          <span class="badge badge-light" title="Humidity">
+          <span className="badge badge-light" title="Humidity">
             {humidity}%
           </span>
         </small>
         <small className="card-text badge-pill mr-1 badge badge-secondary">
-          <span class="badge badge-light" title="Wind Speed">
+          <span className="badge badge-light" title="Wind Speed">
             {windSpeed}m/s
           </span>
         </small>

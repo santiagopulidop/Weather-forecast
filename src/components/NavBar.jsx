@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { CoordinatesContext } from "./Context";
+import lupa from "../img/buscar.svg";
 
 const NavBar = () => {
   const [city, setCity] = useState("");
@@ -11,7 +12,6 @@ const NavBar = () => {
     setSelectedCity,
     setLatitud,
     setLongitud,
-    setWeatherInfo,
     setQueryWeather,
   } = useContext(CoordinatesContext);
 
@@ -60,6 +60,7 @@ const NavBar = () => {
   useEffect(() => {
     if (city !== "") {
       document.getElementById("input-city").value = selectedCity.place_name;
+
       setLatitud(selectedCity.geometry.coordinates[1]);
       setLongitud(selectedCity.geometry.coordinates[0]);
       setQueryWeather(true);
@@ -96,7 +97,9 @@ const NavBar = () => {
               aria-label="Search"
               onChange={handleChange}
               autoComplete="off"
-            />
+            ></input>
+            <img src={lupa} alt="buscar" id="lupa-buscar" />
+
             <div id="resultados" className="list-group-flush">
               {data.map((i, index) => {
                 return (
@@ -112,13 +115,6 @@ const NavBar = () => {
               })}
             </div>
           </div>
-          <button
-            type="button"
-            className="btn btn-outline-info my-2 my-sm-0"
-            onClick={handleClick}
-          >
-            Search
-          </button>
         </form>
       </div>
     </nav>
