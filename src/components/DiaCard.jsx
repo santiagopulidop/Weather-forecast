@@ -18,28 +18,30 @@ const DiaCard = ({
         alt="icon"
       />
       <div className="card-body p-0 pb-4">
-        <h5 className="card-title mb-2">{day}</h5>
+        <h5 className="card-title mb-2 font-color font-weight-bold">{day}</h5>
         <p>
-          <small className="text-center font-italic w-100">{description}</small>
+          <small className="text-center font-italic w-100 font-color">
+            {description}
+          </small>
         </p>
-        <small className="card-text m-1 badge badge-pill badge-secondary">
-          min: <span className="badge badge-light">{minTemp}</span>
+        <small className="card-text m-1 badge badge-pill badge-color">
+          min: <span className="badge badge-color">{minTemp}</span>
         </small>
-        <small className="card-text badge-pill badge badge-secondary">
-          max: <span className="badge badge-light">{maxTemp}</span>
+        <small className="card-text badge-pill badge badge-color">
+          max: <span className="badge badge-color">{maxTemp}</span>
         </small>
-        <small className="card-text m-1 badge-pill badge badge-secondary">
-          <span className="badge badge-light" title="Pressure">
+        <small className="card-text m-1 badge-pill badge badge-color">
+          <span className="badge badge-color" title="Pressure">
             {pressure}hPa
           </span>
         </small>
-        <small className="card-text badge-pill m-1 badge badge-secondary">
-          <span className="badge badge-light" title="Humidity">
+        <small className="card-text badge-pill m-1 badge badge-color">
+          <span className="badge badge-color" title="Humidity">
             {humidity}%
           </span>
         </small>
-        <small className="card-text badge-pill mr-1 badge badge-secondary">
-          <span className="badge badge-light" title="Wind Speed">
+        <small className="card-text badge-pill mr-1 badge badge-color">
+          <span className="badge badge-color" title="Wind Speed">
             {windSpeed}m/s
           </span>
         </small>

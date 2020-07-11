@@ -24,11 +24,12 @@ const HoraHora = () => {
                     height="50"
                   />
                 )}
-                <span>
+                <span className="font-color">
                   {nextHour && nextTemp && codeIcon && `${nextTemp}°C`}
                 </span>
-                <span></span>
-                {nextHour && nextTemp && codeIcon && `${nextHour}:00`}
+                <span className="font-color">
+                  {nextHour && nextTemp && codeIcon && `${nextHour}:00`}
+                </span>
               </div>
             )
           );

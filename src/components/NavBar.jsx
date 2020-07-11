@@ -68,7 +68,7 @@ const NavBar = () => {
   }, [count]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <nav className="navbar navbar-expand-lg font-color-b bg-light" id="navbar">
       <a className="navbar-brand" href="/">
         Weather Forecast
       </a>
@@ -77,7 +77,7 @@ const NavBar = () => {
         <form className="form-inline my-2 my-lg-0">
           <div className="busqueda position-relative d-flex">
             <input
-              className="form-control mr-sm-2"
+              className="form-control mr-sm-2 font-color-b"
               id="input-city"
               type="search"
               placeholder="Search"
@@ -85,7 +85,12 @@ const NavBar = () => {
               onChange={handleChange}
               autoComplete="off"
             ></input>
-            <img src={lupa} alt="buscar" id="lupa-buscar" />
+            <img
+              src={lupa}
+              alt="buscar"
+              id="lupa-buscar"
+              className="font-color-b"
+            />
 
             <div id="resultados" className="list-group-flush">
               {data.map((i, index) => {

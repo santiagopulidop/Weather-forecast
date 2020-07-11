@@ -44,14 +44,17 @@ const ClimaHoy = () => {
             alt="icon"
           />
           <div className="media-body variables-clima-hoy">
-            <h6 className="mt-0">{`${weatherInfo.current.temp}°C ${weatherInfo.current.weather[0].main}`}</h6>
+            <h6 className="mt-0 font-color font-color-b">{`${weatherInfo.current.temp}°C ${weatherInfo.current.weather[0].main}`}</h6>
 
             <p>
-              <i> {weatherInfo.current.weather[0].description}</i>
+              <i className="font-color-b">
+                {" "}
+                {weatherInfo.current.weather[0].description}
+              </i>
             </p>
             <p>
-              <small>
-                <b>Feels Like: </b>
+              <small className="font-color-b">
+                <b className="font-color-b">Feels Like: </b>
                 {`${weatherInfo.current.feels_like}°C`}
               </small>{" "}
             </p>
