@@ -4,7 +4,6 @@ const HoraHora = () => {
   const { weatherInfo } = useContext(CoordinatesContext);
 
   if (weatherInfo !== "") {
-    /* let codeIcon = weatherInfo.hourly.weather[0].icon; */
     return (
       <div className="hora-hora d-flex">
         {weatherInfo.hourly.map((i, index) => {

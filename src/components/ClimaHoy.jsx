@@ -26,7 +26,6 @@ const ClimaHoy = () => {
 
   if (weatherInfo !== "") {
     localStorage.setItem("weatherInfo", JSON.stringify(weatherInfo));
-    /* setDefaulCity(document.getElementById("input-city").value); */
     let codeIcon = weatherInfo.current.weather[0].icon;
     if (queryWeather) {
       localStorage.setItem(
