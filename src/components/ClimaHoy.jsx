@@ -57,28 +57,14 @@ const ClimaHoy = () => {
             </p>
           </div>
         </div>
-        {/* <div className="clima-descripcion">
-          <div className="temperatura">
-            {" "}
-            <span>
-              <img
-                src={`http://openweathermap.org/img/wn/${codeIcon}@2x.png`}
-                alt="icono"
-              />
-            </span>{" "}
-            {`${weatherInfo.current.temp}° ${weatherInfo.current.weather[0].main}`}
-          </div>
-          <div className="sensacion">
-            Feels Like: {`${weatherInfo.current.feels_like}°`}
-          </div>
-          <div className="descripcion">
-            {weatherInfo.current.weather[0].description}
-          </div>
-        </div> */}
       </div>
     );
   } else {
-    return <div>Cargando...</div>;
+    return (
+      <div className="spinner-grow text-center" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    );
   }
 };
 

@@ -36,7 +36,11 @@ const HoraHora = () => {
       </div>
     );
   } else {
-    return <div>cargando...</div>;
+    return (
+      <div className="spinner-grow text-center" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    );
   }
 };
 
